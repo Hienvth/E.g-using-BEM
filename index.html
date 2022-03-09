@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="toast">
+        <!-- <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast__msg">Go to next approval to finish actives</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div> -->
+        
+    </div>
+    <div>
+        <div onclick="showSuccessToast();" class="btn btn--success">Show success toast</div>
+        <div onclick="showErrorToast();" class="btn btn--danger">Show error toast</div>
+    </div>
+
+    <script>
+                
+        function showSuccessToast(){
+                                
+            toast ({
+                title:'Thành công!',
+                message:'Bạn đã hoàn tất việc tạo Thông báo thành công!',
+                type:'success',
+                duration:5000
+            });
+        }
+
+        function showErrorToast() {
+
+                        
+            toast ({
+                title:'Thất bại ?!',
+                message:'Bạn đã hoàn tất việc tạo Thông báo thành công nhưng nó mà đỏ ?!',
+                type:'error',
+                duration:5000
+            });
+        }
+    </script>
+   
+
+    <script src="./func.js"></script>
+
+
+</body>
+</html>

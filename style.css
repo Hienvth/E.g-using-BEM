@@ -1,0 +1,165 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+body > div {
+    margin: auto;
+    /* display: inline-block; */
+
+}
+.btn
+{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    padding: 12px 38px;
+    min-width: 140px;
+    
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.btn + .btn {
+    margin-left: 16px;
+}
+.btn:hover{
+    opacity: 0.4;
+}
+.btn--success{
+    
+    background-color: green;
+}
+.btn--warn{
+    
+    background-color: rgb(236, 236, 14);
+}
+.btn--danger{
+    
+    background-color: red;
+}
+
+
+
+/*  toast */
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+
+    z-index: 9999;
+}
+
+.toast{
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    border-radius: 2px  ;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0,0,0, 0.08) ;
+    min-width: 400px;
+    max-width: 450px; 
+    transition: all linear 0.3s;
+}
+
+
+@keyframes sliderInRight {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}   
+
+.toast + .toast {
+    margin-top: 24px;
+}
+
+.toast--success {
+    border-color: rgb(101, 219, 101);
+}
+.toast--success .toast__icon {
+    color: rgb(101, 219, 101) ;
+}
+.toast--info {
+    border-color: blue;
+}
+.toast--info .toast__icon {
+    color: blue ;
+}
+.toast--warn {
+    border-color: orange;
+}
+.toast--warn .toast__icon {
+    color: orange ;
+}
+.toast--error {
+    border-color: red;
+}
+.toast--error .toast__icon {
+    color: red ;
+}
+
+.toast__icon {
+    font-size: 15px;
+}
+.toast__close,
+.toast__icon{
+    padding: 0 16px;
+
+}
+.toast__body{
+    flex-grow: 1;
+}
+.toast__title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+
+}
+.toast__msg{
+    font-size: 14px;
+    color: #888;
+    margin-top: 4px;
+    line-height: 1.6;
+}
+.toast__close{
+    font-size: 20px;
+    color: rgba(0,0,0, 0.3);
+    cursor: pointer;
+}
+
+
+
+
+
+
